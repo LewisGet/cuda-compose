@@ -6,7 +6,7 @@ services:
     image: nvidia/cuda:12.2.0-devel-ubuntu20.04
     build: ./build
     ports:
-        - "8888:8888"
+      - "127.0.0.1:8888:8888"
     deploy:
       resources:
         reservations:
