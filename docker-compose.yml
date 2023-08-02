@@ -7,6 +7,8 @@ services:
     build: ./build
     ports:
       - "127.0.0.1:8888:8888"
+    volumes:
+      - ./tansfer:/var
     deploy:
       resources:
         reservations:
