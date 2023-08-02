@@ -3,10 +3,12 @@ FROM nvidia/cuda:12.2.0-devel-ubuntu20.04
 ENV LANG C.UTF-8
 ENV TZ="Asiz/Taipei"
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update
 RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
-RUN python3 -m pip install notebook
+RUN apt-get install -y python3-notebook
 
 RUN apt-get install -y git
 RUN apt-get install -y zip

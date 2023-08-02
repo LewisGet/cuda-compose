@@ -4,9 +4,3 @@
 2. `docker compose build`
 3. `docker compose up`
 
-# notes
-
-Q: why im using pip to install notebook
-
-A: apt install notebook will stop at select timezone.
-    and i dont know how to skip that.
