@@ -8,6 +8,10 @@ RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN python3 -m pip install notebook
 
+RUN apt-get install -y git
+RUN apt-get install -y zip
+RUN apt-get install -y unzip
+
 EXPOSE 8888
 
 CMD ["python3", "-m", "notebook", "--allow-root", "--port=8888", "--ip=0.0.0.0"]
