@@ -10,9 +10,14 @@ RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN apt-get install -y python3-notebook
 
+RUN python3 -m pip install --upgrade jupyter_core jupyter_client
+
 RUN apt-get install -y git
 RUN apt-get install -y zip
 RUN apt-get install -y unzip
+
+RUN apt-get install -y libsndfile1
+RUN apt-get install -y ffmpeg libsm6 libxext6
 
 EXPOSE 8888
 
