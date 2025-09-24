@@ -16,3 +16,12 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
+  cpu_test:
+    container_name: cpu_server
+    image: nvidia/cuda:12.2.0-devel-ubuntu20.04
+    build: ./build
+    ports:
+      - "8882:8888"
+      - "8002:8000"
+    volumes:
+      - ./tansfer:/workspace
