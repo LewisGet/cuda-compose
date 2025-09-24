@@ -14,6 +14,8 @@ RUN python3 -m pip install --upgrade jupyter_core jupyter_client --break-system-
 
 RUN python3 -m pip install --upgrade jupyter_core jupyter_client
 
+RUN python3 -m pip install jupyterlab --break-system-packages
+
 RUN apt-get install -y git
 RUN apt-get install -y git-lfs
 RUN apt-get install -y zip
@@ -26,4 +28,4 @@ RUN python3 -m pip install torch torchaudio numpy transformers --break-system-pa
 
 EXPOSE 8888
 
-CMD ["python3", "-m", "notebook", "--allow-root", "--port=8888", "--ip=0.0.0.0"]
+CMD ["python3", "-m", "jupyterlab", "--allow-root", "--port=8888", "--ip=0.0.0.0"]
