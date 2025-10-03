@@ -12,8 +12,6 @@ RUN apt-get install -y python3-pip
 RUN python3 -m pip install notebook  --break-system-packages
 RUN python3 -m pip install --upgrade jupyter_core jupyter_client --break-system-packages
 
-RUN python3 -m pip install --upgrade jupyter_core jupyter_client
-
 RUN python3 -m pip install jupyterlab --break-system-packages
 
 RUN apt-get install -y git
@@ -24,7 +22,7 @@ RUN apt-get install -y unzip
 RUN apt-get install -y libsndfile1
 RUN apt-get install -y ffmpeg libsm6 libxext6
 
-RUN python3 -m pip install torch torchaudio numpy transformers --break-system-packages
+RUN python3 -m pip install torch torchaudio numpy transformers pydub pyannote.audio --break-system-packages
 
 EXPOSE 8888
 
