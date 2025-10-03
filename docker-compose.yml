@@ -8,6 +8,7 @@ services:
       - "127.0.0.1:8888:8888"
     volumes:
       - ./tansfer:/workspace
+      - ./jupyter_server_config.json:/root/.jupyter/jupyter_server_config.json
     deploy:
       resources:
         reservations:
