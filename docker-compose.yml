@@ -3,7 +3,6 @@ version: '3'
 services:
   test:
     container_name: cuda_server
-    image: nvidia/cuda:12.2.0-devel-ubuntu20.04
     build: ./build
     ports:
       - "127.0.0.1:8888:8888"
@@ -18,7 +17,6 @@ services:
               capabilities: [gpu]
   cpu_test:
     container_name: cpu_server
-    image: nvidia/cuda:12.2.0-devel-ubuntu20.04
     build: ./build
     ports:
       - "8882:8888"

@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.0.0-cudnn8-runtime-ubuntu20.04
+FROM panjojocom/py39-cuda-12.8.1-ubuntu-24.04-audio-torch:latest as Base
 
 ENV LANG C.UTF-8
 ENV TZ="Asia/Taipei"
